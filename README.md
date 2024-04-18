@@ -16,21 +16,23 @@ clientName - client name
 
 **Input JSON file:**
 
+```json
 [
-   {
-     "productType": "Laptop",
-     "brandName": "HP",
-     "price": 1200,
-     "clientName": "John Doe"
-   },
-   {
-     "productType": "Smartphone",
-     "brandName": "Samsung",
-     "price": 800,
-     "clientName": "Jane Smith"
-   },
-   ...
+{
+"productType": "Laptop",
+"brandName": "HP",
+"price": 1200,
+"clientName": "John Doe"
+},
+{
+"productType": "Smartphone",
+"brandName": "Samsung",
+"price": 800,
+"clientName": "Jane Smith"
+},
+...
 ]
+```
 
 **Output XML file (statistics):**
 <statistics>
