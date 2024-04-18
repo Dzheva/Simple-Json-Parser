@@ -50,11 +50,11 @@ The "Simple-Json-Parser" project is a program for processing JSON files with inf
 <statistics>
 <attributeCounts>
 <entry>
-<key>Samsung</key>
+<key>HP</key>
 <value>1</value>
 </entry>
 <entry>
-<key>HP</key>
+<key>Samsung</key>
 <value>1</value>
 </entry>
 </attributeCounts>
