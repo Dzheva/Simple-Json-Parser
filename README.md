@@ -4,6 +4,7 @@ The "Simple-Json-Parser" project is a program for processing JSON files with inf
 # Main Entity
 **Order**
 productType - product type
+
 brandName - brand name
 price - product price
 clientName - client name
