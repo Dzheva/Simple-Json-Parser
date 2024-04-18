@@ -37,24 +37,18 @@ public class MyParser {
     }
 
     public static List<File> getFilesFromFolder(String folderPath) throws IOException {
-        return Files.list(Paths.get(folderPath))
-                .filter(path -> path.toString().endsWith(".json"))
-                .map(Path::toFile)
-                .collect(Collectors.toList());
+        return Files.list(Paths.get(folderPath)).filter(path -> path.toString().endsWith(".json")).map(Path::toFile).collect(Collectors.toList());
     }
 
     public static Map<String, Long> processFiles(List<File> fileList, String attribute, ForkJoinPool forkJoinPool) {
         try {
-            List<Order> allOrders = forkJoinPool.submit(() ->
-                    fileList.parallelStream()
-                            .flatMap(file -> {
-                                try {
-                                    return parseOrdersFromFile(file).stream();
-                                } catch (IOException e) {
-                                    throw new RuntimeException(e);
-                                }
-                            })
-                            .collect(Collectors.toList())).get();
+            List<Order> allOrders = forkJoinPool.submit(() -> fileList.parallelStream().flatMap(file -> {
+                try {
+                    return parseOrdersFromFile(file).stream();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }).collect(Collectors.toList())).get();
 
             List<String> attributes = extractAttributes(allOrders, attribute);
             return calculateStatistics(attributes);
@@ -103,27 +97,24 @@ public class MyParser {
 
 
     public static List<String> extractAttributes(List<Order> orders, String attribute) {
-        return orders.stream()
-                .map(order -> {
-                    switch (attribute) {
-                        case "productType":
-                            return order.getProductType();
-                        case "brandName":
-                            return order.getBrandName();
-                        case "price":
-                            return Integer.toString(order.getPrice());
-                        case "clientName":
-                            return order.getClientName();
-                        default:
-                            throw new IllegalArgumentException("Incorrectly specified attribute for statistics calculation");
-                    }
-                })
-                .collect(Collectors.toList());
+        return orders.stream().map(order -> {
+            switch (attribute) {
+                case "productType":
+                    return order.getProductType();
+                case "brandName":
+                    return order.getBrandName();
+                case "price":
+                    return Integer.toString(order.getPrice());
+                case "clientName":
+                    return order.getClientName();
+                default:
+                    throw new IllegalArgumentException("Incorrectly specified attribute for statistics calculation");
+            }
+        }).collect(Collectors.toList());
     }
 
     public static Map<String, Long> calculateStatistics(List<String> attributes) {
-        return attributes.stream()
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        return attributes.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
     }
 
     public static void saveStatisticsToXML(Map<String, Long> attributeCounts, String outputFileName) throws JAXBException {

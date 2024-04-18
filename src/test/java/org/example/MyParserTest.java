@@ -14,6 +14,17 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class MyParserTest {
     @Test
+    public void testGetFilesFromFolder() throws IOException {
+
+        //There are 3 JSON files.
+        String folderPath = System.getProperty("user.dir") + File.separator + "src/main/java/org/example/JsonFilesFolder";
+        List<File> fileList = MyParser.getFilesFromFolder(folderPath);
+
+        assertNotNull(fileList);
+        assertEquals(3, fileList.size());
+    }
+
+    @Test
     public void testParseOrdersFromFile() {
         String fileName = "src/test/java/org/example/test.json";
         File testFile = new File(System.getProperty("user.dir") + File.separator + fileName);
