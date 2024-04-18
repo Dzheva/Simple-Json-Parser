@@ -2,15 +2,22 @@
 The "Simple-Json-Parser" project is a program for processing JSON files with information about orders and generating statistics on the specified attributes.
 
 # Main Entity
-**Order**
+1. **App**:
+        - **Description**: this is the class that launches the application into operation.
 
-productType - product type
+2. **Order**:
+        - **Description**: This class contains information about the product, brand, price and customer.
+        - **Attributes**:
+          - `productType`: product type of the order.
+          - `brandName`: product brand.
+          - `price`: order price.
+          - `clientName`: name of the client who made the order.
 
-brandName - brand name
+3. **XmlStatisticWriter**:
+        - **Description**: designed for convenient recording of statistics in XML format with preliminary DESC sorting by the number of occurrences.
 
-price - product price
-
-clientName - client name
+4. **MyParser**:
+        - **Description**: This class is responsible for parsing JSON files, extracting order information, creating statistics based on the specified attributes, and generating XML files with statistics.
 
 # Example files
 
