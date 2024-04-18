@@ -4,7 +4,7 @@ The "Simple-Json-Parser" project is a program for processing JSON files with inf
 # Main Entity
 1. **App**:
 
-   - **Description**: this is the class that launches the application into operation.
+   - **Description**: This class launches the application into operation.
 
 3. **Order**:
 
@@ -18,7 +18,7 @@ The "Simple-Json-Parser" project is a program for processing JSON files with inf
 
 5. **XmlStatisticWriter**:
 
-   - **Description**: designed for convenient recording of statistics in XML format with preliminary DESC sorting by the number of occurrences.
+   - **Description**: This class is designed for convenient recording of statistics in XML format, with preliminary DESC sorting by the number of occurrences.
 
 7. **MyParser**:
 
