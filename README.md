@@ -45,24 +45,16 @@ The "Simple-Json-Parser" project is a program for processing JSON files with inf
 ]
 ```
 
-**Output XML file (statistics):**
+**Output XML file (statistics by product brand):**
 ```xml
 <statistics>
 <attributeCounts>
 <entry>
 <key>Samsung</key>
-<value>5</value>
+<value>1</value>
 </entry>
 <entry>
-<key>Lenovo</key>
-<value>3</value>
-</entry>
-<entry>
-<key>JBL</key>
-<value>2</value>
-</entry>
-<entry>
-<key>Bose</key>
+<key>HP</key>
 <value>1</value>
 </entry>
 </attributeCounts>
