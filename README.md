@@ -62,17 +62,7 @@ The results show that increasing the number of threads reduces the program execu
 **Results**
 | Number of threads | Execution time (ms)| 
 |-------------|-------------|
-| Ячейка 1    | Ячейка 740  |
-| Ячейка 2    | Ячейка 10    | 
-| Ячейка 4    | Ячейка 8    | 
-| Ячейка 8    | Ячейка 9    | 
-
-Number of threads Execution time (ms)
-
-1                740
-
-2                10
-
-4                8
-
-8                9
+|  1    |  740  |
+|  2    |  10   | 
+|  4    |  8    | 
+|  8    |  9    | 
