@@ -60,6 +60,12 @@ For optimal processing of large volumes of data, experiments were carried out wi
 The results show that increasing the number of threads reduces the program execution time.
 
 **Results**
+| Number of threads | Execution time (ms)| 
+|-------------|-------------|
+| Ячейка 1    | Ячейка 740  |
+| Ячейка 2    | Ячейка 10    | 
+| Ячейка 4    | Ячейка 8    | 
+| Ячейка 8    | Ячейка 9    | 
 
 Number of threads Execution time (ms)
 
