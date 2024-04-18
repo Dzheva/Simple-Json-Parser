@@ -1,14 +1,14 @@
 # Simple-Json-Parser
 The "Simple-Json-Parser" project is a program for processing JSON files with information about orders and generating statistics on the specified attributes.
 
-# Main Entity
+# Classes
 1. **App**:
 
    - **Description**: This class launches the application into operation.
 
 3. **Order**:
 
-   - **Description**: This class contains information about the product, brand, price and customer.
+   - **Description**: This class is the main entity and contains information about the product, brand, price and customer.
         
         - **Attributes**:
           - `productType`: product type of the order.
