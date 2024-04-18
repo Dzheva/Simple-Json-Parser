@@ -3,14 +3,19 @@ The "Simple-Json-Parser" project is a program for processing JSON files with inf
 
 # Main Entity
 **Order**
+
 productType - product type
 
 brandName - brand name
+
 price - product price
+
 clientName - client name
 
 # Example files
+
 **Input JSON file:**
+
 [
    {
      "productType": "Laptop",
@@ -55,8 +60,13 @@ For optimal processing of large volumes of data, experiments were carried out wi
 The results show that increasing the number of threads reduces the program execution time.
 
 **Results**
+
 Number of threads Execution time (ms)
+
 1                740
+
 2                10
+
 4                8
+
 8                9
