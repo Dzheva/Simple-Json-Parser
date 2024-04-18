@@ -29,33 +29,33 @@ clientName - client name
 "brandName": "Samsung",
 "price": 800,
 "clientName": "Jane Smith"
-},
-...
+}
 ]
 ```
 
 **Output XML file (statistics):**
+```xml
 <statistics>
-     <attributeCounts>
-         <entry>
-             <key>Samsung</key>
-             <value>5</value>
-         </entry>
-         <entry>
-             <key>Lenovo</key>
-             <value>3</value>
-         </entry>
-         <entry>
-             <key>JBL</key>
-             <value>2</value>
-         </entry>
-         <entry>
-             <key>Bose</key>
-             <value>1</value>
-         </entry>
-      ...
-     </attributeCounts>
+<attributeCounts>
+<entry>
+<key>Samsung</key>
+<value>5</value>
+</entry>
+<entry>
+<key>Lenovo</key>
+<value>3</value>
+</entry>
+<entry>
+<key>JBL</key>
+<value>2</value>
+</entry>
+<entry>
+<key>Bose</key>
+<value>1</value>
+</entry>
+</attributeCounts>
 </statistics>
+```
 
 # Results of experiments with different numbers of threads.
 For optimal processing of large volumes of data, experiments were carried out with the number of threads during parallel file processing.
