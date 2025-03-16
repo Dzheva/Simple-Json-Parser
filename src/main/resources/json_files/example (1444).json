@@ -1,0 +1,32 @@
+[
+  {
+    "productType": "Laptop",
+    "brandName": "Dell",
+    "price": 1100,
+    "clientName": "Michael Wilson"
+  },
+  {
+    "productType": "Smartphone",
+    "brandName": "Apple",
+    "price": 1000,
+    "clientName": "David Taylor"
+  },
+  {
+    "productType": "Tablet",
+    "brandName": "Samsung",
+    "price": 1300,
+    "clientName": "Olivia Martinez"
+  },
+  {
+    "productType": "Smartwatch",
+    "brandName": "Garmin",
+    "price": 250,
+    "clientName": "Sophia Anderson"
+  },
+  {
+    "productType": "Headphones",
+    "brandName": "Bose",
+    "price": 150,
+    "clientName": "William Garcia"
+  }
+]
