@@ -1,74 +1,70 @@
 # Simple-Json-Parser
-The "Simple-Json-Parser" project is a program for processing JSON files with information about orders and generating statistics on the specified attributes.
 
-# Classes
-1. **App**:
+The **Simple-Json-Parser** is a tool that parses JSON files from any directory on your PC. It extracts data based on specified JSON nodes (attributes), processes the files, and generates detailed statistics for each attribute. The results are saved in an XML file for easy review and further analysis.
 
-   - **Description**: This class launches the application into operation.
+## Main Requirements
+- **File Handling**: Avoid loading entire files into Java RAM, considering the potentially large number and size of files.
+- **Parallel Parsing**: Use a thread pool to process files (each file in its own thread) and compare performance across 1, 2, 4, and 8 threads.
 
-3. **Order**:
-
-   - **Description**: This class is the main entity and contains information about the product, brand, price and customer.
-        
-        - **Attributes**:
-          - `productType`: product type of the order.
-          - `brandName`: product brand.
-          - `price`: order price.
-          - `clientName`: name of the client who made the order.
-
-5. **XmlStatisticWriter**:
-
-   - **Description**: This class is designed for convenient recording of statistics in XML format, with preliminary DESC sorting by the number of occurrences.
-
-7. **MyParser**:
-
-   - **Description**: This class is responsible for parsing JSON files, extracting order information, creating statistics based on the specified attributes, and generating XML files with statistics.
-
-# Example files
+## Example Files
 
 **Input JSON file:**
 
 ```json
 [
-{
-"productType": "Laptop",
-"brandName": "HP",
-"price": 1200,
-"clientName": "John Doe"
-},
-{
-"productType": "Smartphone",
-"brandName": "Samsung",
-"price": 800,
-"clientName": "Jane Smith"
-}
+  {
+    "productType": "Laptop",
+    "brandName": "HP",
+    "price": 1200,
+    "clientName": "John Doe"
+  },
+  {
+    "productType": "Smartphone",
+    "brandName": "Samsung",
+    "price": 800,
+    "clientName": "Jane Smith"
+  }
 ]
 ```
 
-**Output XML file (statistics by product brand):**
+**Output XML file (statistics by brandName):**
+
 ```xml
 <statistics>
-<attributeCounts>
-<entry>
-<key>HP</key>
-<value>1</value>
-</entry>
-<entry>
-<key>Samsung</key>
-<value>1</value>
-</entry>
-</attributeCounts>
+  <item>
+    <value>Samsung</value>
+    <count>2880</count>
+  </item>
+  <item>
+    <value>Lenovo</value>
+    <count>2544</count>
+  </item>
 </statistics>
 ```
 
-# Results of experiments with different numbers of threads.
-For optimal processing of large volumes of data, experiments were carried out with the number of threads during parallel file processing.
-The results show that increasing the number of threads reduces the program execution time.
+## How to Run the Program
 
-**Results**
-| Number of threads | Execution time (ms)| 
-|-------------|-------------|
-|  1    |  740  |
-|  2    |  10   | 
-|  4    |  8    | 
-|  8    |  9    | 
+1. **Start the Application**:  
+   Launch the program by executing the **Main** class.
+
+2. **Provide Input**:  
+   When prompted, enter the following:
+   - **a)** Path to the folder containing the JSON files.
+   - **b)** The attribute name to parse from the JSON files.
+   - **c)** The number of threads to use for parallel processing.
+
+3. **View the Results**:  
+   After processing, the program will generate an XML file with the parsed statistics, saved in the `resources/xml_statistics` folder.
+
+4. **Test with Sample Data**:  
+   Test the program using sample JSON files located in the `resources/json_files` folder.
+
+## My Results with `resources/json_files` by Attribute - `brandName`
+
+| Number of Threads | Execution Time (ms) |
+|-------------------|---------------------|
+| 1                 | 1193                |
+| 2                 | 790                 |
+| 4                 | 598                 |
+| 8                 | 494                 |
+

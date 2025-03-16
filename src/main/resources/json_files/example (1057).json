@@ -1,0 +1,39 @@
+[
+  {
+    "productType": "Laptop",
+    "brandName": "HP",
+    "price": 1200,
+    "clientName": "John Doe"
+  },
+  {
+    "productType": "Smartphone",
+    "brandName": "Samsung",
+    "price": 800,
+    "clientName": "Jane Smith"
+  },
+  {
+    "productType": "Tablet",
+    "brandName": "Samsung",
+    "price": 1500,
+    "clientName": "Alice Johnson"
+  },
+  {
+    "productType": "Smartwatch",
+    "brandName": "Samsung",
+    "price": 200,
+    "clientName": "Bob Brown"
+  },
+  {
+    "productType": "Headphones",
+    "brandName": "Samsung",
+    "price": 100,
+    "clientName": "Emma White"
+  },
+  	
+{
+    "productType": "smartphone",
+    "brandName": "samsung",
+    "price": 800,
+    "clientName": "Jane Smith"
+  }
+]

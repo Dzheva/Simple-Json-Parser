@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac5dde5d-b8fc-4100-b072-c1c21d82b86f" name="Changes" comment="">
+    <list default="true" id="ac5dde5d-b8fc-4100-b072-c1c21d82b86f" name="Changes" comment="added one more test">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AppController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/ProcessingConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/ProcessingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/StatisticsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/InputHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/JsonFilesParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/StAXXmlWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MyParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MyParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/MyParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/MyParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JsonFilesFolder/order1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JsonFilesFolder/order2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JsonFilesFolder/order3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MyParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/XmlStatisticsWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/MyParserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +36,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit3 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,6 +64,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
@@ -56,7 +74,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -67,17 +88,30 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Professional\Documents\GitHub\Simple-Json-Parser\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyParserTest.testGetFilesFromFolder">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Simple-Json-Parser" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.v2.Main" />
       <module name="Simple-Json-Parser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.v2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -85,76 +119,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.v2.MainApp" />
       <module name="Simple-Json-Parser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.v2.core.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.MyParserTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyParserTest.testCalculateStatistics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MaxThreads" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.v2.smth.MaxThreads" />
       <module name="Simple-Json-Parser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.v2.core.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.MyParserTest" />
-      <option name="METHOD_NAME" value="testCalculateStatistics" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyParserTest.testGetFilesFromFolder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="org.example.smth.MaxThreads" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.smth.MaxThreads" />
       <module name="Simple-Json-Parser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.smth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.MyParserTest" />
-      <option name="METHOD_NAME" value="testGetFilesFromFolder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyParserTest.testParseOrdersFromFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Simple-Json-Parser" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.MyParserTest" />
-      <option name="METHOD_NAME" value="testParseOrdersFromFile" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyParserTest.testGetFilesFromFolder" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.MyParserTest" />
-        <item itemvalue="JUnit.MyParserTest.testParseOrdersFromFile" />
-        <item itemvalue="JUnit.MyParserTest.testCalculateStatistics" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.org.example.smth.MaxThreads" />
+        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.MaxThreads" />
       </list>
     </recent_temporary>
   </component>
@@ -167,17 +177,57 @@
       <option name="presentableId" value="Default" />
       <updated>1713363721811</updated>
       <workItem from="1713363723533" duration="5588000" />
+      <workItem from="1714314879269" duration="223000" />
+      <workItem from="1714315123892" duration="306000" />
+      <workItem from="1714319780305" duration="6000" />
+      <workItem from="1714384593493" duration="19000" />
+      <workItem from="1715278611832" duration="18000" />
+      <workItem from="1715278993442" duration="21000" />
+      <workItem from="1715343375774" duration="18000" />
+      <workItem from="1739641041197" duration="16611000" />
+      <workItem from="1740160506619" duration="5095000" />
+      <workItem from="1740212992899" duration="11803000" />
+      <workItem from="1740487072068" duration="694000" />
+      <workItem from="1740925665338" duration="6574000" />
+      <workItem from="1741438563276" duration="5866000" />
+      <workItem from="1741588300960" duration="5574000" />
+      <workItem from="1741718249935" duration="3000" />
+      <workItem from="1741971033832" duration="14456000" />
+      <workItem from="1742117030230" duration="11702000" />
     </task>
+    <task id="LOCAL-00001" summary="added one more test">
+      <created>1713435777432</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713435777432</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added one more test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added one more test" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" log-message="true" suspend="NONE" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/XmlStatisticsWriter.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/v1/XmlStatisticsWriter.java</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>

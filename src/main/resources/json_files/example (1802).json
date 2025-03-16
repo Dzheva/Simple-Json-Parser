@@ -1,0 +1,32 @@
+[
+  {
+    "productType": "Laptop",
+    "brandName": "Lenovo",
+    "price": 1000,
+    "clientName": "Ethan Martinez"
+  },
+  {
+    "productType": "Smartphone",
+    "brandName": "Lenovo",
+    "price": 700,
+    "clientName": "James Brown"
+  },
+  {
+    "productType": "Tablet",
+    "brandName": "Lenovo",
+    "price": 1200,
+    "clientName": "Ava Jones"
+  },
+  {
+    "productType": "Smartwatch",
+    "brandName": "JBL",
+    "price": 150,
+    "clientName": "Mia Garcia"
+  },
+  {
+    "productType": "Headphones",
+    "brandName": "JBL",
+    "price": 80,
+    "clientName": "Benjamin Wilson"
+  }
+]

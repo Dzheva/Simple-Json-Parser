@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<statistics>
+    <item>
+        <value>Headphones</value>
+        <count>2000</count>
+    </item>
+    <item>
+        <value>Laptop</value>
+        <count>2000</count>
+    </item>
+    <item>
+        <value>Tablet</value>
+        <count>2000</count>
+    </item>
+    <item>
+        <value>Smartphone</value>
+        <count>2000</count>
+    </item>
+    <item>
+        <value>Smartwatch</value>
+        <count>2000</count>
+    </item>
+    <item>
+        <value>smartphone</value>
+        <count>576</count>
+    </item>
+</statistics>
