@@ -19,59 +19,95 @@ public class InputHandler {
 
     public String getDirectory(Scanner scanner) {
         String directoryPath;
+        System.out.print("Enter the directory path: ");
         while (true) {
-            System.out.print("Enter the directory path: ");
             directoryPath = scanner.nextLine().trim();
-
-            File directory = new File(directoryPath);
-            if (directory.exists() && directory.isDirectory()) {
-                System.out.println("✅You entered: " + directoryPath);
+            try {
+                validateDirectory(directoryPath);
+                System.out.println("✅ You entered: " + directoryPath);
                 break;
-            } else {
-                System.out.println("⛔️Error: Invalid directory path. Please try again.");
+            } catch (IllegalArgumentException e) {
+                System.err.println(e.getMessage());
             }
         }
         return directoryPath;
     }
 
-    public String getAttribute(Scanner scanner) {
+    private static void validateDirectory(String directoryPath) {
+        File directory = new File(directoryPath);
+        if (!directory.exists() || !directory.isDirectory()) {
+            throw new IllegalArgumentException("⛔ Error: Invalid directory path. Please try again.");
+        }
+    }
+
+    public static String getAttribute(Scanner scanner) {
         String attribute;
+        System.out.print("Enter the attribute: ");
         while (true) {
-            System.out.print("Enter the attribute for statistics: ");
             attribute = scanner.nextLine().trim();
 
-            if (attribute.isEmpty()) {
-                System.out.println("⛔️Error: Attribute cannot be empty. Please try again.");
-            } else if (attribute.length() > 50) {
-                System.out.println("⛔️Error: Attribute length exceeds 50 characters. Please try again.");
-            } else {
+            try {
+                validateAttribute(attribute);
                 System.out.println("✅You entered: " + attribute);
                 break;
+            } catch (IllegalArgumentException e) {
+                System.err.println(e.getMessage());
             }
 
         }
+
         return attribute;
+    }
+
+    private static void validateAttribute(String attribute) {
+        if (attribute.isEmpty()) {
+            throw new IllegalArgumentException("⛔ Error: Attribute cannot be empty. Please try again.");
+        }
+
+        if (attribute.length() > 50) {
+            throw new IllegalArgumentException("⛔ Error: Attribute length exceeds 50 characters. Please try again.");
+        }
     }
 
     public int getThreadPoolSize(Scanner scanner) {
         int threadPoolSize;
-        while (true) {
-            System.out.print("Enter the thread pool size: ");
+        System.out.print("Enter the thread pool size: ");
 
-            if (scanner.hasNextInt()) {
-                threadPoolSize = scanner.nextInt();
-                if (threadPoolSize > 0) {
-                    System.out.println("✅You entered: " + threadPoolSize);
-                    break;
-                } else {
-                    System.out.println("⛔️Input an integer greater than 0!");
-                }
-            } else {
-                System.out.println("⛔️That's not an integer!");
-                scanner.next();
+        while (true) {
+            String input = scanner.nextLine().trim();
+
+            try {
+                threadPoolSize = validateThreadPoolSize(input);
+                System.out.println("✅ You entered: " + threadPoolSize);
+                break;
+            } catch (IllegalArgumentException e) {
+                System.err.println(e.getMessage());
             }
+
         }
+
         return threadPoolSize;
     }
 
+    private int validateThreadPoolSize(String input) {
+        int size;
+
+        try {
+            size = Integer.parseInt(input);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("⛔ Input must be an integer!");
+        }
+
+        if (size <= 0) {
+            throw new IllegalArgumentException("⛔ Input must be an integer greater than 0!");
+        }
+
+        int availableProcessors = Runtime.getRuntime().availableProcessors();
+
+        if (size > availableProcessors) {
+            throw new IllegalArgumentException("⛔ Maximum thread pool size is " + availableProcessors + ". Please try again.");
+        }
+
+        return size;
+    }
 }
