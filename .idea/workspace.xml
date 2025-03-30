@@ -4,28 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac5dde5d-b8fc-4100-b072-c1c21d82b86f" name="Changes" comment="added one more test">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AppController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/ProcessingConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/ProcessingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/StatisticsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/InputHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/JsonFilesParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/StAXXmlWriter.java" afterDir="false" />
+    <list default="true" id="ac5dde5d-b8fc-4100-b072-c1c21d82b86f" name="Changes" comment="refactoring InputHandler">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JsonFilesFolder/order1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JsonFilesFolder/order2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JsonFilesFolder/order3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MyParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/XmlStatisticsWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/MyParserTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/test.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ProcessingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/InputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/InputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/JsonFilesParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/JsonFilesParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/StAXXmlWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/StAXXmlWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/xml_statistics/statistics_by_brandName.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/xml_statistics/statistics_by_productType.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +66,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -98,7 +87,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Simple-Json-Parser" />
@@ -160,8 +149,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.org.example.smth.MaxThreads" />
         <item itemvalue="Application.MainApp" />
         <item itemvalue="Application.MaxThreads" />
@@ -194,6 +183,12 @@
       <workItem from="1741718249935" duration="3000" />
       <workItem from="1741971033832" duration="14456000" />
       <workItem from="1742117030230" duration="11702000" />
+      <workItem from="1742132947289" duration="457000" />
+      <workItem from="1742231740000" duration="61000" />
+      <workItem from="1742321203114" duration="5475000" />
+      <workItem from="1742834878791" duration="12906000" />
+      <workItem from="1743095243321" duration="6384000" />
+      <workItem from="1743337483089" duration="5731000" />
     </task>
     <task id="LOCAL-00001" summary="added one more test">
       <created>1713435777432</created>
@@ -202,11 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1713435777432</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactoring InputHandler">
+      <created>1742843065310</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1742843065310</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -221,7 +226,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added one more test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added one more test" />
+    <MESSAGE value="refactoring InputHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring InputHandler" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

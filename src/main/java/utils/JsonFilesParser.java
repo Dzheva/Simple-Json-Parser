@@ -1,21 +1,25 @@
 package utils;
 
 import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
+import lombok.extern.slf4j.Slf4j;
 import service.StatisticsService;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.Deque;
-
+@Slf4j
 public class JsonFilesParser {
     public void parseFile(File file, String attribute, StatisticsService statisticsService) {
         try (JsonParser parser = new JsonFactory().createParser(file)) {
             processJson(parser, attribute, statisticsService);
+        } catch (JsonParseException e) {
+            log.error("Error processing file: {}", file.getName(), e);
         } catch (IOException e) {
-            System.err.println("Error processing file: " + file.getName() + " - " + e.getMessage());
+            log.error("Error processing file: {}", file.getName(), e);
         }
     }
 
@@ -42,6 +46,7 @@ public class JsonFilesParser {
                 }
             }
         }
+
     }
 
 }

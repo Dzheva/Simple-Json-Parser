@@ -1,5 +1,6 @@
 package service;
 
+import lombok.extern.slf4j.Slf4j;
 import utils.JsonFilesParser;
 
 import java.io.IOException;
@@ -13,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
-
+@Slf4j
 public class ProcessingService {
     private final JsonFilesParser jsonFilesParser;
     private final StatisticsService statisticsService;
@@ -26,13 +27,16 @@ public class ProcessingService {
     public void processing(String directoryPath, String attribute, int threadPoolSize) {
         Path dirPath = Paths.get(directoryPath);
         if (!Files.isDirectory(dirPath)) {
-            System.out.println("Invalid directory path!");
-            return;
+            throw new IllegalArgumentException("Invalid directory path: " + directoryPath);
         }
 
-        parseJsonFiles(dirPath, attribute, threadPoolSize);
-
-        statisticsService.saveToXml(attribute);
+        try {
+            parseJsonFiles(dirPath, attribute, threadPoolSize);
+            statisticsService.saveToXml(attribute);
+        } catch (Exception e) {
+            System.err.println("Unexpected error during processing: " + e.getMessage());
+            log.error("Unexpected error during processing: {}", e.getMessage(), e);
+        }
     }
 
 
@@ -46,7 +50,7 @@ public class ProcessingService {
             }
             CompletableFuture.allOf(futures.toArray(new CompletableFuture[0])).join();
         } catch (IOException e) {
-            System.err.println("Error reading directory: " + e.getMessage());
+            log.error("Error reading directory: {}", dirPath, e);
         } finally {
             shutdownExecutor(executor);
         }
@@ -56,7 +60,7 @@ public class ProcessingService {
     private CompletableFuture<Void> parseFileAsync(Path filePath, String attribute, ExecutorService executor) {
         return CompletableFuture.runAsync(() -> {
             jsonFilesParser.parseFile(filePath.toFile(), attribute, statisticsService);
-            System.out.println("Processed: " + filePath.getFileName() + " in " + Thread.currentThread().getName());
+            log.debug("Processed: {} in {}", filePath.getFileName(), Thread.currentThread().getName());
         }, executor);
     }
 
@@ -68,7 +72,7 @@ public class ProcessingService {
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            e.printStackTrace();
+            log.error("Error shutting down executor", e);
         }
     }
 }

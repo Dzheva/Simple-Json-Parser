@@ -1,5 +1,7 @@
 package utils;
 
+import lombok.extern.slf4j.Slf4j;
+
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
@@ -8,9 +10,9 @@ import java.io.FileOutputStream;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-
+@Slf4j
 public class StAXXmlWriter {
-    private static final String DIRECTORY = "src/main/resources/xml_statistics"; // Save files in this folder
+    private static final String DIRECTORY = "src/main/resources/xml_statistics"; // xml file are saved in this folder
 
     public void writeStatistics(Map<String, AtomicInteger> statistics, String attribute) {
         ensureDirectoryExists(); // Ensure the 'xml_statistics' directory exists
@@ -23,12 +25,12 @@ public class StAXXmlWriter {
                 writeStatisticsData(writer, statistics);
                 closeXmlDocument(writer);
                 System.out.println("✅Statistics saved to " + fileName);
+                log.info("✅Statistics saved to " + fileName);
             } finally {
                 writer.close();
             }
         } catch (Exception e) {
-            System.err.println("Error writing XML file: " + fileName);
-            e.printStackTrace();
+            log.error("Error writing XML file: {}", fileName, e);
         }
     }
 
@@ -73,8 +75,7 @@ public class StAXXmlWriter {
             writer.writeCharacters("\n");
 
         } catch (XMLStreamException e) {
-            System.err.println("Error writing entry: " + value);
-            e.printStackTrace();
+            log.error("Error writing entry: {}", value, e);
         }
     }
 
@@ -84,7 +85,7 @@ public class StAXXmlWriter {
         writer.writeEndElement();
     }
 
-    private void closeXmlDocument(XMLStreamWriter writer) throws XMLStreamException  {
+    private void closeXmlDocument(XMLStreamWriter writer) throws XMLStreamException {
         writer.writeEndElement();
         writer.writeCharacters("\n");
         writer.writeEndDocument();
