@@ -1,7 +1,7 @@
 package controller;
 
 import lombok.extern.slf4j.Slf4j;
-import utils.InputHandler;
+import input.InputHandler;
 import dto.ProcessingConfig;
 import service.ProcessingService;
 @Slf4j
