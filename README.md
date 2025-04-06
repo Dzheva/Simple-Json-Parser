@@ -42,7 +42,7 @@ The **Simple-Json-Parser** is a tool that parses JSON files from any directory o
 </statistics>
 ```
 
-## How to Run the Program
+## How to Run
 
 1. **Start the Application**:  
    Launch the program by executing the **Main** class.
