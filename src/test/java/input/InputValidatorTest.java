@@ -18,12 +18,16 @@ class InputValidatorTest {
     @Test
     @Order(1)
     @DisplayName("whenGivenInvalidDirectoryPath_thenShouldThrowException")
-    void invalidDirectoryPath() {
+    void testInvalidDirectoryPath() {
+        // Given
         String invalidPath = "invalid/path";
         String expectedMsg = "Invalid directory path. Please try again.";
+
+        // When
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
                 () -> inputValidator.validateDirectory(invalidPath));
 
+        // Then
         assertAll(
                 () -> assertTrue(exception instanceof IllegalArgumentException),
                 () -> assertEquals(expectedMsg, exception.getMessage())
@@ -33,7 +37,7 @@ class InputValidatorTest {
     @Test
     @Order(2)
     @DisplayName("whenGivenValidDirectoryPath_thenShouldNotThrowException")
-    void validDirectoryPath() {
+    void testValidDirectoryPath() {
         String validPath = System.getProperty("user.dir");
         assertDoesNotThrow(() -> inputValidator.validateDirectory(validPath));
     }
@@ -41,13 +45,16 @@ class InputValidatorTest {
     @Test
     @Order(3)
     @DisplayName("whenGivenEmptyAttribute_thenShouldThrowException")
-    void emptyAttribute() {
+    void testEmptyAttribute() {
+        // Given
         String emptyAttribute = "";
         String expectedMsg = "Attribute cannot be empty. Please try again.";
 
+        // When
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
                 () -> inputValidator.validateAttribute(emptyAttribute));
 
+        // Then
         assertAll(
                 () -> assertTrue(exception instanceof IllegalArgumentException),
                 () -> assertEquals(expectedMsg, exception.getMessage())
@@ -57,13 +64,16 @@ class InputValidatorTest {
     @Test
     @Order(4)
     @DisplayName("whenGivenTooLongAttribute_thenShouldThrowException")
-    void tooLongAttribute() {
+    void testTooLongAttribute() {
+        // Given
         String longAttribute = "A".repeat(51);  // Length greater than 50
         String expectedMsg = "Attribute length exceeds 50 characters. Please try again.";
 
+        // When
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
                 () -> inputValidator.validateAttribute(longAttribute));
 
+        // Then
         assertAll(
                 () -> assertTrue(exception instanceof IllegalArgumentException),
                 () -> assertEquals(expectedMsg, exception.getMessage())
@@ -73,7 +83,7 @@ class InputValidatorTest {
     @Test
     @Order(5)
     @DisplayName("whenGivenValidAttribute_thenShouldNotThrowException")
-    void validAttribute() {
+    void testValidAttribute() {
         String validAttribute = "Valid Attribute";
         assertDoesNotThrow(() -> inputValidator.validateAttribute(validAttribute));
     }
@@ -81,13 +91,16 @@ class InputValidatorTest {
     @Test
     @Order(6)
     @DisplayName("whenGivenNonIntegerInputForThreadPoolSize_thenShouldThrowException")
-    void nonIntegerInput() {
+    void testNonIntegerInput() {
+        // Given
         String nonIntegerInput = "notAnInteger";
         String expectedMsg = "Input must be an integer!";
 
+        // When
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
                 () -> inputValidator.validateInteger(nonIntegerInput));
 
+        // Then
         assertAll(
                 () -> assertTrue(exception instanceof IllegalArgumentException),
                 () -> assertEquals(expectedMsg, exception.getMessage())
@@ -97,7 +110,7 @@ class InputValidatorTest {
     @Test
     @Order(7)
     @DisplayName("whenGivenValidIntegerInputForThreadPoolSize_thenShouldNotThrowException")
-    void validIntegerInput() {
+    void testValidIntegerInput() {
         String validIntegerInput = "4";
         assertDoesNotThrow(() -> inputValidator.validateInteger(validIntegerInput));
     }
@@ -105,13 +118,16 @@ class InputValidatorTest {
     @Test
     @Order(8)
     @DisplayName("whenGivenZeroThreadPoolSize_thenShouldThrowException")
-    void zeroThreadPoolSize() {
+    void testZeroThreadPoolSize() {
+        // Given
         int zeroThreadPoolSize = 0;
         String expectedMsg = "Input must be an integer greater than 0!";
 
+        // When
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
                 () -> inputValidator.validateThreadPoolSize(zeroThreadPoolSize));
 
+        // Then
         assertAll(
                 () -> assertTrue(exception instanceof IllegalArgumentException),
                 () -> assertEquals(expectedMsg, exception.getMessage())
@@ -121,7 +137,7 @@ class InputValidatorTest {
     @Test
     @Order(9)
     @DisplayName("whenGivenValidThreadPoolSize_thenShouldNotThrowException")
-    void validThreadPoolSize() {
+    void testValidThreadPoolSize() {
         int validThreadPoolSize = 4;
         assertDoesNotThrow(() -> inputValidator.validateThreadPoolSize(validThreadPoolSize));
     }

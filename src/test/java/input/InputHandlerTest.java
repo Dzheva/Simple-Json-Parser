@@ -36,7 +36,7 @@ public class InputHandlerTest {
     @Test
     @Order(1)
     @DisplayName("When given valid directory path, then should return it")
-    void validDirectoryPath() {
+    void testValidDirectoryPath() {
         // Given
         String validPath = "C:\\validDirectory";
         when(inputProvider.getNextLine()).thenReturn(validPath);
@@ -53,7 +53,7 @@ public class InputHandlerTest {
     @Test
     @Order(2)
     @DisplayName("When given invalid directory path, then should retry until valid input")
-    void invalidDirectoryPath() {
+    void testInvalidDirectoryPath() {
         // Given
         String invalidPath = "invalid/path";
         String validPath = "C:\\validDirectory";
@@ -73,7 +73,7 @@ public class InputHandlerTest {
     @Test
     @Order(3)
     @DisplayName("When given valid attribute, then should return it")
-    void validAttribute() {
+    void testValidAttribute() {
         // Given
         String validAttribute = "name";
         when(inputProvider.getNextLine()).thenReturn(validAttribute);
@@ -90,7 +90,7 @@ public class InputHandlerTest {
     @Test
     @Order(4)
     @DisplayName("When given invalid attribute, then should retry until valid input")
-    void invalidAttribute() {
+    void testInvalidAttribute() {
         // Given
         String invalidAttribute = "";
         String validAttribute = "valid";
@@ -109,7 +109,7 @@ public class InputHandlerTest {
     @Test
     @Order(5)
     @DisplayName("When given valid thread pool size, then should return it")
-    void validThreadPoolSize() {
+    void testValidThreadPoolSize() {
         // Given
         String input = "4";
         int expectedSize = 4;
@@ -129,7 +129,7 @@ public class InputHandlerTest {
     @Test
     @Order(6)
     @DisplayName("When given invalid thread pool size, then should retry until valid input")
-    void invalidThreadPoolSize() {
+    void testInvalidThreadPoolSize() {
         // Given
         String invalidInputNotInteger = "invalid";
         String invalidInputIncorrectThreadPoolSize = "0";
