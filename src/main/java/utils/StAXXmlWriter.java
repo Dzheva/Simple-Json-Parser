@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class StAXXmlWriter {
-    private static final String DIRECTORY = "src/main/resources/xml_statistics"; // xml file are saved in this folder
+    private static final String DIRECTORY = "src/main/resources/xml_statistics"; // XML files are saved in this folder
 
     public void writeStatistics(Map<String, AtomicInteger> statistics, String attribute) {
         ensureDirectoryExists(); // Ensure the 'xml_statistics' directory exists
