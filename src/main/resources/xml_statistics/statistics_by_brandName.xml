@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<statistics>
+    <item>
+        <value>Samsung</value>
+        <count>2880</count>
+    </item>
+    <item>
+        <value>Lenovo</value>
+        <count>2544</count>
+    </item>
+    <item>
+        <value>JBL</value>
+        <count>1696</count>
+    </item>
+    <item>
+        <value>Bose</value>
+        <count>576</count>
+    </item>
+    <item>
+        <value>Dell</value>
+        <count>576</count>
+    </item>
+    <item>
+        <value>samsung</value>
+        <count>576</count>
+    </item>
+    <item>
+        <value>Apple</value>
+        <count>576</count>
+    </item>
+    <item>
+        <value>HP</value>
+        <count>576</count>
+    </item>
+    <item>
+        <value>Garmin</value>
+        <count>576</count>
+    </item>
+</statistics>

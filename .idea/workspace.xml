@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac5dde5d-b8fc-4100-b072-c1c21d82b86f" name="Changes" comment="add unit-tests for StAXXmlWriter">
-      <change afterPath="$PROJECT_DIR$/src/test/java/controller/AppControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/service/ProcessingServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/service/StatisticsServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ProcessingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/StatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/StatisticsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/JsonFilesParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/JsonFilesParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/JsonFilesParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/JsonFilesParserTest.java" afterDir="false" />
+    <list default="true" id="ac5dde5d-b8fc-4100-b072-c1c21d82b86f" name="Changes" comment="add unit-tests for AppController">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +197,7 @@
       <workItem from="1743430837465" duration="4133000" />
       <workItem from="1743527631583" duration="6493000" />
       <workItem from="1743745138733" duration="15620000" />
-      <workItem from="1743940890703" duration="11877000" />
+      <workItem from="1743940890703" duration="12323000" />
     </task>
     <task id="LOCAL-00001" summary="added one more test">
       <created>1713435777432</created>
@@ -263,7 +255,21 @@
       <option name="project" value="LOCAL" />
       <updated>1743945491378</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add unit-tests for Service layer">
+      <created>1743953097504</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1743953097504</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add unit-tests for AppController">
+      <created>1743953121078</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743953121078</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +297,9 @@
     <MESSAGE value="add unit-tests for InputHandler and InputValidator" />
     <MESSAGE value="add unit-tests for JsonFilesParser" />
     <MESSAGE value="add unit-tests for StAXXmlWriter" />
-    <option name="LAST_COMMIT_MESSAGE" value="add unit-tests for StAXXmlWriter" />
+    <MESSAGE value="add unit-tests for Service layer" />
+    <MESSAGE value="add unit-tests for AppController" />
+    <option name="LAST_COMMIT_MESSAGE" value="add unit-tests for AppController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
