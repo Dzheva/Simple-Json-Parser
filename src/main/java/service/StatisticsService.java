@@ -20,5 +20,9 @@ public class StatisticsService {
     public void saveToXml(String attribute) {
         stAXXmlWriter.writeStatistics(statistics, attribute);
     }
+
+    public ConcurrentHashMap<String, AtomicInteger> getStatistics(){
+        return statistics;
+    }
 }
 

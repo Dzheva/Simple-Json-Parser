@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac5dde5d-b8fc-4100-b072-c1c21d82b86f" name="Changes" comment="added logging">
-      <change afterPath="$PROJECT_DIR$/src/main/java/input/InputHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/input/InputProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/input/InputProviderImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/input/InputValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/input/InputHandlerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/input/InputValidatorTest.java" afterDir="false" />
+    <list default="true" id="ac5dde5d-b8fc-4100-b072-c1c21d82b86f" name="Changes" comment="add unit-tests for StAXXmlWriter">
+      <change afterPath="$PROJECT_DIR$/src/test/java/controller/AppControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/ProcessingServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/service/StatisticsServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/InputHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ProcessingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/StatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/StatisticsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/JsonFilesParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/JsonFilesParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/JsonFilesParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/JsonFilesParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +26,8 @@
         <option value="Enum" />
         <option value="JUnit3 Test Class" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -86,11 +84,14 @@
       <recent name="C:\Users\Professional\Documents\GitHub\Simple-Json-Parser\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="service" />
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="input" />
+      <recent name="controller" />
+      <recent name="service" />
       <recent name="utils" />
+      <recent name="input" />
       <recent name="org.example" />
     </key>
   </component>
@@ -102,49 +103,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InputHandlerTest.invalidThreadPoolSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppControllerTest.testStartWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Simple-Json-Parser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="input.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="input" />
-      <option name="MAIN_CLASS_NAME" value="input.InputHandlerTest" />
-      <option name="METHOD_NAME" value="invalidThreadPoolSize" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.AppControllerTest" />
+      <option name="METHOD_NAME" value="testStartWithException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InputHandlerTest.validThreadPoolSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppControllerTest.testStartWithValidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Simple-Json-Parser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="input.*" />
+          <option name="PATTERN" value="controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="input" />
-      <option name="MAIN_CLASS_NAME" value="input.InputHandlerTest" />
-      <option name="METHOD_NAME" value="validThreadPoolSize" />
+      <option name="PACKAGE_NAME" value="controller" />
+      <option name="MAIN_CLASS_NAME" value="controller.AppControllerTest" />
+      <option name="METHOD_NAME" value="testStartWithValidInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InputHandlerTest.whenGivenInvalidAttribute_thenShouldRetry" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProcessingServiceTest.testProcessingWithInValidDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Simple-Json-Parser" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="input.*" />
+          <option name="PATTERN" value="service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="input" />
-      <option name="MAIN_CLASS_NAME" value="input.InputHandlerTest" />
-      <option name="METHOD_NAME" value="whenGivenInvalidAttribute_thenShouldRetry" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.ProcessingServiceTest" />
+      <option name="METHOD_NAME" value="testProcessingWithInValidDirectory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,9 +163,9 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.java in Simple-Json-Parser" />
-        <item itemvalue="JUnit.InputHandlerTest.invalidThreadPoolSize" />
-        <item itemvalue="JUnit.InputHandlerTest.validThreadPoolSize" />
-        <item itemvalue="JUnit.InputHandlerTest.whenGivenInvalidAttribute_thenShouldRetry" />
+        <item itemvalue="JUnit.AppControllerTest.testStartWithException" />
+        <item itemvalue="JUnit.AppControllerTest.testStartWithValidInput" />
+        <item itemvalue="JUnit.ProcessingServiceTest.testProcessingWithInValidDirectory" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +204,8 @@
       <workItem from="1743397366163" duration="3369000" />
       <workItem from="1743430837465" duration="4133000" />
       <workItem from="1743527631583" duration="6493000" />
-      <workItem from="1743745138733" duration="3781000" />
+      <workItem from="1743745138733" duration="15620000" />
+      <workItem from="1743940890703" duration="11877000" />
     </task>
     <task id="LOCAL-00001" summary="added one more test">
       <created>1713435777432</created>
@@ -226,7 +228,42 @@
       <option name="project" value="LOCAL" />
       <updated>1743346053129</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactoring InputHandler and InputValidator">
+      <created>1743851587221</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743851587221</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add unit-tests for InputHandler and InputValidator">
+      <created>1743851606671</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743851606671</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add unit-tests for InputHandler and InputValidator">
+      <created>1743945437052</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743945437052</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add unit-tests for JsonFilesParser">
+      <created>1743945457519</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743945457519</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add unit-tests for StAXXmlWriter">
+      <created>1743945491378</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743945491378</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +287,11 @@
     <MESSAGE value="added one more test" />
     <MESSAGE value="refactoring InputHandler" />
     <MESSAGE value="added logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="added logging" />
+    <MESSAGE value="refactoring InputHandler and InputValidator" />
+    <MESSAGE value="add unit-tests for InputHandler and InputValidator" />
+    <MESSAGE value="add unit-tests for JsonFilesParser" />
+    <MESSAGE value="add unit-tests for StAXXmlWriter" />
+    <option name="LAST_COMMIT_MESSAGE" value="add unit-tests for StAXXmlWriter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -259,6 +300,15 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/v1/XmlStatisticsWriter.java</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/utils/StAXXmlWriterTest.java</url>
+          <line>32</line>
+          <properties class="utils.StAXXmlWriterTest" method="testWriteStatistics">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

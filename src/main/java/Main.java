@@ -5,7 +5,7 @@ import input.InputProviderImpl;
 import input.InputValidator;
 import service.ProcessingService;
 import service.StatisticsService;
-import utils.JsonFilesParser;
+import service.JsonFilesParser;
 import utils.StAXXmlWriter;
 
 import java.util.Scanner;

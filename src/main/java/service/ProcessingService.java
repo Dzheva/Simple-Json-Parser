@@ -1,7 +1,6 @@
 package service;
 
 import lombok.extern.slf4j.Slf4j;
-import utils.JsonFilesParser;
 
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
@@ -14,6 +13,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+
 @Slf4j
 public class ProcessingService {
     private final JsonFilesParser jsonFilesParser;
